@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── JustTouch UI Design Tokens ──────────────────────────────────────────── */
+:root {
+  --color-brand-primary:   #7ABEE8;
+  --color-brand-dark:      #3D96C8;
+  --color-surface-light:   #EDF5FF;
+  --color-surface-mid:     #E6E8EB;
+  --color-surface-muted:   #C7CEDB;
+  --color-navy:            #223049;
+  --color-navy-deep:       #16203A;
+
+  --sidebar-bg:            #FFFFFF;
+  --sidebar-border:        #E6E8EB;
+  --header-bg:             rgba(255,255,255,0.92);
+  --content-bg:            #F4F7FB;
+}
+
+.dark {
+  --sidebar-bg:            #1A2640;
+  --sidebar-border:        #2A3A54;
+  --header-bg:             rgba(22,32,58,0.95);
+  --content-bg:            #111827;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Light mode base */
+  html {
+    background-color: #F4F7FB;
+    color: #223049;
+  }
+
+  /* Dark mode base */
+  html.dark {
+    background-color: #111827;
+    color: #E6E8EB;
+  }
+}
+
+/* ─── Scrollbars ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #C7CEDB; border-radius: 9999px; }
+.dark ::-webkit-scrollbar-thumb { background: #2A3A54; }
+
+/* ─── Focus ring ───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #7ABEE8;
+  outline-offset: 2px;
+}
+
+/* ─── Selection ────────────────────────────────────────────────────────────── */
+::selection {
+  background: #B3D8F5;
+  color: #223049;
+}
