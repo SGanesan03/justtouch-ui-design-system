@@ -15,6 +15,8 @@ out/
 
 # TypeScript
 *.tsbuildinfo
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo
 
 # Environment variables
 .env
@@ -52,3 +54,6 @@ coverage/
 # Misc
 *.local
 .cache/
+
+# Project scripts (not needed in repo)
+write_files.ps1

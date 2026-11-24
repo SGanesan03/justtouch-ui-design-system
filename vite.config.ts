@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: '/justtouch-ui-design-system/',
   plugins: [react()],
   resolve: {
     alias: {
