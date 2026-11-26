@@ -18,14 +18,16 @@ export const JustTouchLogo = memo<LogoProps>(function JustTouchLogo({
   return (
     <div className={`inline-flex items-center gap-2.5 select-none ${className}`} {...rest}>
       <div
-        className={`${LOGO_BOX_SIZES[size]} relative flex items-center justify-center bg-gradient-to-br from-[#7ABEE8] via-[#3D96C8] to-[#223049] shadow-sm ring-1 ring-inset ring-white/20 overflow-hidden`}
+        className={`${LOGO_BOX_SIZES[size]} relative flex items-center justify-center shadow-sm ring-1 ring-inset ring-white/20 overflow-hidden`}
+        style={{ background: 'linear-gradient(135deg, #506C38 0%, #3D5429 50%, #283618 100%)' }}
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.45),transparent_60%)]" />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 30% 25%, rgba(254,250,224,0.35), transparent 60%)' }} />
         <svg
           viewBox="0 0 24 24"
           fill="none"
-          className={`${LOGO_ICON_SIZES[size]} text-white relative z-10`}
+          className={`${LOGO_ICON_SIZES[size]} relative z-10`}
+          style={{ color: '#DDA15E' }}
           aria-hidden="true"
         >
           <path
@@ -39,13 +41,15 @@ export const JustTouchLogo = memo<LogoProps>(function JustTouchLogo({
       </div>
 
       {showText && (
-        <span className={`${LOGO_TEXT_SIZES[size]} font-semibold tracking-tight text-[#223049] dark:text-[#E6E8EB]`}>
+        <span className={`${LOGO_TEXT_SIZES[size]} font-semibold tracking-tight`}
+          style={{ color: '#283618' }}>
           JustTouch UI
         </span>
       )}
 
       {badge && (
-        <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#EDF5FF] text-[#3D96C8] border border-[#B3D8F5] dark:bg-[#2A3A54] dark:text-[#7ABEE8] dark:border-[#384A66]">
+        <span className="px-2 py-0.5 text-xs font-medium rounded-full"
+          style={{ background: '#F5F0CC', color: '#BC6C25', border: '1px solid #E8E0A8' }}>
           {badge}
         </span>
       )}

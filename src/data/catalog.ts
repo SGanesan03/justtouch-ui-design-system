@@ -2,11 +2,11 @@ import type { NavCategory, OverviewCardItem } from '@/types';
 
 // ─── Palette tokens (used in JS for dynamic styles) ──────────────────────────
 export const PALETTE = {
-  sky:     '#7ABEE8',
-  tint:    '#EDF5FF',
-  surface: '#E6E8EB',
-  muted:   '#C7CEDB',
-  navy:    '#223049',
+  amber:   '#DDA15E',
+  cream:   '#FEFAE0',
+  border:  '#E8E0A8',
+  muted:   '#C8B87A',
+  forest:  '#283618',
 } as const;
 
 export const SIDEBAR_CATEGORIES: readonly NavCategory[] = [

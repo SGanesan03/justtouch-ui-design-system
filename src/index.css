@@ -2,27 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── JustTouch UI Design Tokens ──────────────────────────────────────────── */
+/* ─── JustTouch UI Design Tokens — Earthy Olive & Amber ───────────────────── */
 :root {
-  --color-brand-primary:   #7ABEE8;
-  --color-brand-dark:      #3D96C8;
-  --color-surface-light:   #EDF5FF;
-  --color-surface-mid:     #E6E8EB;
-  --color-surface-muted:   #C7CEDB;
-  --color-navy:            #223049;
-  --color-navy-deep:       #16203A;
+  --color-brand:         #506C38;   /* olive green  */
+  --color-brand-dark:    #283618;   /* forest green */
+  --color-accent:        #DDA15E;   /* warm amber   */
+  --color-accent-dark:   #BC6C25;   /* burnt orange */
+  --color-cream:         #FEFAE0;   /* page bg      */
+  --color-cream-mid:     #F5F0CC;
+  --color-cream-border:  #E8E0A8;
 
-  --sidebar-bg:            #FFFFFF;
-  --sidebar-border:        #E6E8EB;
-  --header-bg:             rgba(255,255,255,0.92);
-  --content-bg:            #F4F7FB;
+  --sidebar-bg:          #283618;
+  --sidebar-border:      #3D5429;
+  --header-bg:           rgba(254,250,224,0.95);
+  --content-bg:          #FEFAE0;
 }
 
 .dark {
-  --sidebar-bg:            #1A2640;
-  --sidebar-border:        #2A3A54;
-  --header-bg:             rgba(22,32,58,0.95);
-  --content-bg:            #111827;
+  --sidebar-bg:          #1C2710;
+  --sidebar-border:      #283618;
+  --header-bg:           rgba(28,39,16,0.97);
+  --content-bg:          #111808;
 }
 
 @layer base {
@@ -32,33 +32,31 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Light mode base */
   html {
-    background-color: #F4F7FB;
-    color: #223049;
+    background-color: #FEFAE0;
+    color: #283618;
   }
 
-  /* Dark mode base */
   html.dark {
-    background-color: #111827;
-    color: #E6E8EB;
+    background-color: #111808;
+    color: #FEFAE0;
   }
 }
 
 /* ─── Scrollbars ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: #C7CEDB; border-radius: 9999px; }
-.dark ::-webkit-scrollbar-thumb { background: #2A3A54; }
+::-webkit-scrollbar-thumb  { background: #DDA15E; border-radius: 9999px; }
+.dark ::-webkit-scrollbar-thumb { background: #3D5429; }
 
 /* ─── Focus ring ───────────────────────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid #7ABEE8;
+  outline: 2px solid #DDA15E;
   outline-offset: 2px;
 }
 
 /* ─── Selection ────────────────────────────────────────────────────────────── */
 ::selection {
-  background: #B3D8F5;
-  color: #223049;
+  background: #DDA15E;
+  color: #283618;
 }

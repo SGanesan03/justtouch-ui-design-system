@@ -3,8 +3,8 @@ import { PreviewWrapper } from '@/components/PreviewWrapper';
 import { JustTouchLogo } from '@/components';
 import { Eye, EyeOff, Check, ArrowLeft, Mail, Lock, User, ChevronDown } from 'lucide-react';
 
-const sky = '#7ABEE8', navy = '#223049', tint = '#EDF5FF';
-const surface = '#E6E8EB', muted = '#C7CEDB', text = '#677A96';
+const sky = '#DDA15E', navy = '#283618', tint = '#F5F0CC';
+const surface = '#E8E0A8', muted = '#C8B87A', text = '#7A6C2C';
 
 export function LoginPage() {
   const [showPw, setShowPw] = useState(false);

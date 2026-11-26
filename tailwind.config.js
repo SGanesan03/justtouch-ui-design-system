@@ -12,35 +12,46 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        // JustTouch UI Design System Palette
-        // #7ABEE8 sky-blue · #EDF5FF light tint · #E6E8EB surface · #C7CEDB muted · #223049 navy
+        // JustTouch UI — Earthy Olive & Amber Palette
+        // #506C38 olive · #283618 forest · #FEFAE0 cream · #DDA15E amber · #BC6C25 burnt-orange
         brand: {
-          50:  '#EDF5FF',
-          100: '#D6EAFB',
-          200: '#B3D8F5',
-          300: '#8ECBF0',
-          400: '#7ABEE8',
-          500: '#5AADD9',
-          600: '#3D96C8',
-          700: '#2B7DAD',
-          800: '#1E6490',
-          900: '#154D72',
-          950: '#0D3352',
+          50:  '#F7F9F3',
+          100: '#EAF0E0',
+          200: '#CFDDB8',
+          300: '#A8C285',
+          400: '#7DA355',
+          500: '#506C38',   // primary olive
+          600: '#3D5429',
+          700: '#283618',   // forest dark
+          800: '#1C2710',
+          900: '#111808',
+          950: '#090D04',
         },
-        // Surface / neutral tokens derived from palette
-        surface: {
-          0:   '#FFFFFF',
-          50:  '#EDF5FF',
-          100: '#E6E8EB',
-          200: '#C7CEDB',
-          300: '#A8B2C4',
-          400: '#8896AD',
-          500: '#677A96',
-          600: '#4E6080',
-          700: '#384A66',
-          800: '#2A3A54',
-          900: '#223049',
-          950: '#16203A',
+        amber: {
+          50:  '#FDF6EC',
+          100: '#FAEBD4',
+          200: '#F4D4A8',
+          300: '#EBB87A',
+          400: '#DDA15E',   // primary amber accent
+          500: '#D08840',
+          600: '#BC6C25',   // burnt orange
+          700: '#9A5418',
+          800: '#7A3F10',
+          900: '#5A2D08',
+          950: '#3C1C04',
+        },
+        cream: {
+          50:  '#FFFEF7',
+          100: '#FEFAE0',   // page background
+          200: '#F5F0CC',
+          300: '#E8E0A8',
+          400: '#D4C87A',
+          500: '#C0B050',
+          600: '#A09040',
+          700: '#7A6C2C',
+          800: '#5A4E1C',
+          900: '#3C3410',
+          950: '#1C1808',
         },
       },
       keyframes: {

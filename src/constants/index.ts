@@ -84,10 +84,10 @@ export const LANDING_NAV_LINKS = [
 // ─── Component Demo ───────────────────────────────────────────────────────────
 
 export const GRADIENT_PRESETS = [
-  'from-[#7ABEE8] via-[#3D96C8] to-[#223049]',
-  'from-emerald-400 via-teal-500 to-cyan-700',
-  'from-rose-400 via-pink-500 to-purple-700',
-  'from-amber-400 via-orange-500 to-rose-600',
+  'from-[#506C38] via-[#3D5429] to-[#283618]',
+  'from-[#DDA15E] via-[#BC6C25] to-[#7A3F10]',
+  'from-[#506C38] via-[#DDA15E] to-[#BC6C25]',
+  'from-[#FEFAE0] via-[#DDA15E] to-[#506C38]',
 ] as const;
 
 export const DEFAULT_GRADIENT = GRADIENT_PRESETS[0];

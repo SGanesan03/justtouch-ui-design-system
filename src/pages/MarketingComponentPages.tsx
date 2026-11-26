@@ -5,8 +5,8 @@ import {
   Zap, Shield, BarChart2, Globe, Users, Layers,
 } from 'lucide-react';
 
-const sky = '#7ABEE8', navy = '#223049', tint = '#EDF5FF';
-const surface = '#E6E8EB', muted = '#C7CEDB', text = '#677A96';
+const sky = '#DDA15E', navy = '#283618', tint = '#F5F0CC';
+const surface = '#E8E0A8', muted = '#C8B87A', text = '#7A6C2C';
 
 export function HeroSection() {
   const [email, setEmail] = useState('');
@@ -94,9 +94,9 @@ export function CTASection() {
     <div className="space-y-6">
       <PreviewWrapper title="CTA Section" description="Full-width conversion banner with gradient background and dual action buttons." code="// CTA Section">
         <div className="px-6 py-12 rounded-2xl text-center space-y-5 mx-4 my-4"
-          style={{ background: `linear-gradient(135deg,${navy} 0%,#1a3a5c 100%)` }}>
+          style={{ background: `linear-gradient(135deg,${navy} 0%,#3D5429 100%)` }}>
           <h2 className="text-2xl font-bold text-white">Start building with JustTouch UI today</h2>
-          <p className="text-sm max-w-md mx-auto" style={{ color: '#C7CEDB' }}>
+          <p className="text-sm max-w-md mx-auto" style={{ color: muted }}>
             Join 10,000+ developers shipping production-ready React interfaces faster than ever.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -110,7 +110,7 @@ export function CTASection() {
               View components <ArrowRight className="inline w-4 h-4 ml-1" />
             </button>
           </div>
-          <p className="text-xs" style={{ color: '#8896AD' }}>No credit card required · MIT license · Free forever</p>
+          <p className="text-xs" style={{ color: muted }}>No credit card required · MIT license · Free forever</p>
         </div>
       </PreviewWrapper>
     </div>
@@ -275,7 +275,7 @@ export function FooterSection() {
                   style={{ background: sky }}>JT</div>
                 <span className="text-sm font-bold text-white">JustTouch UI</span>
               </div>
-              <p className="text-xs leading-relaxed" style={{ color: '#8896AD' }}>
+              <p className="text-xs leading-relaxed" style={{ color: muted }}>
                 Production-ready React components for modern SaaS teams.
               </p>
             </div>
@@ -284,7 +284,7 @@ export function FooterSection() {
                 <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: muted }}>{col.title}</p>
                 <ul className="space-y-2">
                   {col.links.map(l => (
-                    <li key={l}><button className="text-xs transition hover:text-white" style={{ color: '#8896AD' }}>{l}</button></li>
+                    <li key={l}><button className="text-xs transition hover:text-white" style={{ color: muted }}>{l}</button></li>
                   ))}
                 </ul>
               </div>
@@ -292,7 +292,7 @@ export function FooterSection() {
           </div>
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"
             style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-            <p className="text-xs" style={{ color: '#8896AD' }}>© 2024 JustTouch UI. All rights reserved.</p>
+            <p className="text-xs" style={{ color: muted }}>© 2024 JustTouch UI. All rights reserved.</p>
             {!subbed ? (
               <form onSubmit={e => { e.preventDefault(); if (emailVal) setSubbed(true); }} className="flex gap-2">
                 <input type="email" value={emailVal} onChange={e => setEmailVal(e.target.value)}
@@ -317,7 +317,7 @@ export function BannerSection() {
   const banners = [
     { id: 0, type: 'announcement', msg: '🎉 JustTouch UI v4.1 is live — 12 new blocks added!', bg: tint,       color: navy,       border: muted },
     { id: 1, type: 'warning',      msg: '⚠️  Your Pro plan renews in 3 days. Update billing.',  bg: '#fef3c7',   color: '#92400e',  border: '#fcd34d' },
-    { id: 2, type: 'cookie',       msg: '🍪 We use cookies to improve your experience.',         bg: navy,        color: '#C7CEDB',  border: 'transparent' },
+    { id: 2, type: 'cookie',       msg: '🍪 We use cookies to improve your experience.',         bg: navy,        color: '#FEFAE0',  border: 'transparent' },
   ];
   const visible = banners.filter(b => !dismissed.includes(b.id));
   return (
@@ -373,7 +373,7 @@ export function BlogSection() {
               <div key={p.title} className="p-5 rounded-2xl cursor-pointer hover:shadow-md transition"
                 style={{ border: `1px solid ${surface}`, background: '#fff' }}>
                 <div className="h-28 rounded-xl mb-4 flex items-center justify-center"
-                  style={{ background: tint, backgroundImage: 'linear-gradient(135deg,rgba(122,190,232,0.15) 0%,rgba(34,48,73,0.05) 100%)' }}>
+                  style={{ background: tint, backgroundImage: 'linear-gradient(135deg,rgba(221,161,94,0.12) 0%,rgba(40,54,24,0.04) 100%)' }}>
                   <span className="text-xs font-semibold px-2 py-1 rounded-full" style={{ background: '#fff', color: sky }}>{p.cat}</span>
                 </div>
                 <h3 className="text-sm font-semibold leading-snug mb-2" style={{ color: navy }}>{p.title}</h3>
