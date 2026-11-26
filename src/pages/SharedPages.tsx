@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PreviewWrapper } from '@/components/PreviewWrapper';
 import { JustTouchLogo } from '@/components';
-import { Eye, EyeOff, Check, ArrowLeft, Mail, Lock, User, ChevronDown } from 'lucide-react';
+import { Eye, EyeOff, Check, ArrowLeft, Mail, Lock, User } from 'lucide-react';
 
 const sky = '#DDA15E', navy = '#283618', tint = '#F5F0CC';
 const surface = '#E8E0A8', muted = '#C8B87A', text = '#7A6C2C';

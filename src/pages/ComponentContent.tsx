@@ -39,7 +39,6 @@ interface ComponentContentProps {
 export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId, onSelectPage, onVariantsChange, darkMode = false }) => {
   const {
     searchFilter, setSearchFilter,
-    activeTab, setActiveTab,
     modalOpen, setModalOpen,
     openFaq, toggleFaq,
     gradientPreset, setGradientPreset,

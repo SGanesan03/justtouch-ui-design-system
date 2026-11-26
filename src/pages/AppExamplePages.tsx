@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PreviewWrapper } from '@/components/PreviewWrapper';
 import {
   Search, BookOpen, ChevronRight, Check, Save, Upload,
@@ -9,9 +9,9 @@ import {
 // Earthy palette tokens
 const olive = '#506C38', forest = '#283618', cream = '#FEFAE0';
 const creamMid = '#F5F0CC', creamBorder = '#E8E0A8', amber = '#DDA15E';
-const amberDark = '#BC6C25', textMuted = '#7A6C2C', textSub = '#506C38';
+const amberDark = '#BC6C25', textMuted = '#7A6C2C';
 // aliases for readability
-const sky = amber, navy = forest, tint = creamMid;
+const navy = forest, tint = creamMid;
 const surface = creamBorder, muted = '#C8B87A', text = textMuted;
 
 export function AnalyticsDashboard() {
@@ -165,7 +165,6 @@ export function OperationsDashboard() {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
   const statuses = ['All', 'Active', 'Review', 'Done', 'Blocked'];
-  const members = ['SK','PN','AM','DK'];
   const projects = [
     { name: 'Design System v4',    team: 'Core UI',   progress: 78, status: 'Active',  due: 'Dec 15', owner: 'SK', priority: 'High' },
     { name: 'Figma Token Sync',    team: 'Tokens',    progress: 45, status: 'Review',  due: 'Dec 20', owner: 'AM', priority: 'Med' },
