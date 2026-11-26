@@ -17,18 +17,20 @@
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@components": ["./src/components/index.ts"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@data/*": ["./src/data/*"],
-      "@hooks": ["./src/hooks/index.ts"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@services": ["./src/services/index.ts"],
-      "@services/*": ["./src/services/*"],
-      "@constants": ["./src/constants/index.ts"],
-      "@utils": ["./src/utils/index.ts"],
-      "@types/*": ["./src/types/*"]
+      "@/*":            ["./src/*"],
+      "@justtouch/ui":  ["./src/lib/index.ts"],
+      "@components":    ["./src/app/components/index.ts"],
+      "@components/*":  ["./src/app/components/*"],
+      "@pages/*":       ["./src/app/pages/*"],
+      "@data/*":        ["./src/app/data/*"],
+      "@hooks":         ["./src/app/hooks/index.ts"],
+      "@hooks/*":       ["./src/app/hooks/*"],
+      "@services":      ["./src/app/services/index.ts"],
+      "@services/*":    ["./src/app/services/*"],
+      "@constants":     ["./src/app/constants/index.ts"],
+      "@utils":         ["./src/lib/utils/index.ts"],
+      "@theme":         ["./src/lib/theme/index.ts"],
+      "@types/*":       ["./src/lib/types/*"]
     }
   },
   "include": ["src"]

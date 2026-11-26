@@ -47,9 +47,9 @@ export const VIEW_MODES: ViewMode[] = ['preview', 'code'];
 // ─── Logo ────────────────────────────────────────────────────────────────────
 
 export const LOGO_BOX_SIZES: Record<LogoSize, string> = {
-  sm: 'w-7 h-7 rounded-lg',
-  md: 'w-8 h-8 rounded-lg',
-  lg: 'w-12 h-12 rounded-2xl',
+  sm: 'w-9 h-9 rounded-xl',
+  md: 'w-11 h-11 rounded-xl',
+  lg: 'w-14 h-14 rounded-2xl',
 };
 
 export const LOGO_TEXT_SIZES: Record<LogoSize, string> = {
@@ -59,9 +59,9 @@ export const LOGO_TEXT_SIZES: Record<LogoSize, string> = {
 };
 
 export const LOGO_ICON_SIZES: Record<LogoSize, string> = {
-  sm: 'w-4 h-4',
-  md: 'w-4 h-4',
-  lg: 'w-7 h-7',
+  sm: 'w-6 h-6',
+  md: 'w-7 h-7',
+  lg: 'w-9 h-9',
 };
 
 // ─── Landing Page ─────────────────────────────────────────────────────────────
@@ -84,10 +84,10 @@ export const LANDING_NAV_LINKS = [
 // ─── Component Demo ───────────────────────────────────────────────────────────
 
 export const GRADIENT_PRESETS = [
-  'from-[#506C38] via-[#3D5429] to-[#283618]',
-  'from-[#DDA15E] via-[#BC6C25] to-[#7A3F10]',
-  'from-[#506C38] via-[#DDA15E] to-[#BC6C25]',
-  'from-[#FEFAE0] via-[#DDA15E] to-[#506C38]',
+  'from-[#6A1B4D] via-[#3A0D2C] to-[#1A1A1F]',
+  'from-[#C6A24B] via-[#A8882E] to-[#6C5410]',
+  'from-[#6A1B4D] via-[#8B2E63] to-[#C6A24B]',
+  'from-[#F8F8F9] via-[#E4E4E7] to-[#6A1B4D]',
 ] as const;
 
 export const DEFAULT_GRADIENT = GRADIENT_PRESETS[0];

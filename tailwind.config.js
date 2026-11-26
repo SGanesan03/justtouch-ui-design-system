@@ -12,46 +12,47 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        // JustTouch UI — Earthy Olive & Amber Palette
-        // #506C38 olive · #283618 forest · #FEFAE0 cream · #DDA15E amber · #BC6C25 burnt-orange
-        brand: {
-          50:  '#F7F9F3',
-          100: '#EAF0E0',
-          200: '#CFDDB8',
-          300: '#A8C285',
-          400: '#7DA355',
-          500: '#506C38',   // primary olive
-          600: '#3D5429',
-          700: '#283618',   // forest dark
-          800: '#1C2710',
-          900: '#111808',
-          950: '#090D04',
+        // Neutrals — dominant surfaces
+        neutral: {
+          50:  '#FAFAFA',
+          100: '#F4F4F5',
+          200: '#E4E4E7',
+          300: '#D4D4D8',
+          400: '#A1A1AA',
+          500: '#71717A',
+          600: '#52525B',
+          700: '#3F3F46',
+          800: '#27272A',
+          900: '#18181B',
+          950: '#09090B',
         },
-        amber: {
-          50:  '#FDF6EC',
-          100: '#FAEBD4',
-          200: '#F4D4A8',
-          300: '#EBB87A',
-          400: '#DDA15E',   // primary amber accent
-          500: '#D08840',
-          600: '#BC6C25',   // burnt orange
-          700: '#9A5418',
-          800: '#7A3F10',
-          900: '#5A2D08',
-          950: '#3C1C04',
+        // Plum — brand accent only
+        plum: {
+          50:  '#FAF0F6',
+          100: '#F2D9E8',
+          200: '#E4B3D1',
+          300: '#D08DB9',
+          400: '#B8649E',
+          500: '#8B2E63',
+          600: '#6A1B4D',   // primary brand
+          700: '#561535',
+          800: '#3A0D2C',   // deep plum
+          900: '#280820',
+          950: '#160412',
         },
-        cream: {
-          50:  '#FFFEF7',
-          100: '#FEFAE0',   // page background
-          200: '#F5F0CC',
-          300: '#E8E0A8',
-          400: '#D4C87A',
-          500: '#C0B050',
-          600: '#A09040',
-          700: '#7A6C2C',
-          800: '#5A4E1C',
-          900: '#3C3410',
-          950: '#1C1808',
+        // Gold — CTA accent only
+        gold: {
+          50:  '#FBF6E9',
+          100: '#F5EAC8',
+          200: '#EDD494',
+          300: '#DFC060',
+          400: '#C6A24B',   // primary gold
+          500: '#A8882E',
+          600: '#8A6E1A',
+          700: '#6C5410',
+          800: '#4E3C08',
+          900: '#302404',
+          950: '#181202',
         },
       },
       keyframes: {

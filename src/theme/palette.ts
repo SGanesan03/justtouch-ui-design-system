@@ -1,38 +1,38 @@
 /**
- * JustTouch UI — Earthy Olive & Amber Design Palette
- * Single source of truth for all color tokens used across the app.
+ * JustTouch UI — Professional palette with Plum & Gold accents
  *
- * #506C38  olive green   — primary brand
- * #283618  forest green  — dark surfaces / sidebar
- * #FEFAE0  warm cream    — light background / page bg
- * #DDA15E  warm amber    — accent / interactive
- * #BC6C25  burnt orange  — accent dark / CTA
+ * Neutrals carry the UI. Color is used only for intent.
+ *
+ * Neutrals  : #FFFFFF white · #F8F8F9 off-white · #F1F1F3 light grey · #E4E4E7 border · #71717A muted text
+ * Brand     : #6A1B4D plum  (active states, links, brand marks)
+ * Accent    : #C6A24B gold  (CTAs, highlights — used sparingly)
+ * Dark bg   : #1A1A1F near-black (dark mode surfaces)
  */
 
 export const P = {
-  // ── Greens (sidebar, dark surfaces, primary brand) ──────────────────────────
-  forest:      '#283618',   // darkest — sidebar bg, dark page bg
-  forestDeep:  '#1C2710',   // deeper dark mode bg
-  forestMid:   '#3D5429',   // sidebar borders, mid surfaces
-  olive:       '#506C38',   // primary brand, active states
-  oliveMid:    '#7DA355',   // lighter olive for hover states
+  // ── Neutrals — the dominant surfaces ─────────────────────────────────────────
+  forest:      '#1A1A1F',   // near-black — dark mode page bg
+  forestDeep:  '#111114',   // darkest dark mode bg
+  forestMid:   '#2C2C33',   // dark mode card / border
+  olive:       '#6A1B4D',   // plum — brand / active (accent only)
+  oliveMid:    '#8B2E63',   // plum hover
 
-  // ── Amber / Orange (accent, CTA, interactive) ────────────────────────────────
-  amber:       '#DDA15E',   // primary accent — links, active borders, icons
-  amberDark:   '#BC6C25',   // darker accent — CTA buttons, hover
+  // ── Gold accent — CTAs only ───────────────────────────────────────────────────
+  amber:       '#D9B1C7',   // dusty rose — subtle tints, tags
+  amberDark:   '#C6A24B',   // gold — primary CTA color
 
-  // ── Cream (light mode surfaces) ──────────────────────────────────────────────
-  cream:       '#FEFAE0',   // page background, light surface
-  creamMid:    '#F5F0CC',   // card backgrounds, subtle surfaces
-  creamMuted:  '#E8E0A8',   // borders, dividers in light mode
-  creamDark:   '#C8B87A',   // muted text on dark backgrounds
+  // ── Light surfaces — white-based, not pink ────────────────────────────────────
+  cream:       '#F8F8F9',   // page background (off-white, neutral)
+  creamMid:    '#F1F1F3',   // card alt / subtle bg
+  creamMuted:  '#E4E4E7',   // borders, dividers
+  creamDark:   '#A1A1AA',   // muted text on dark bg
 
   // ── Text ─────────────────────────────────────────────────────────────────────
-  textDark:    '#283618',   // primary text (light mode)
-  textMid:     '#506C38',   // secondary text (light mode)
-  textMuted:   '#7A6C2C',   // muted text
-  textLight:   '#FEFAE0',   // primary text (dark mode)
-  textLightMid:'#C8B87A',   // secondary text (dark mode)
+  textDark:    '#18181B',   // primary text — near black
+  textMid:     '#3F3F46',   // secondary text
+  textMuted:   '#71717A',   // muted / placeholder
+  textLight:   '#FAFAFA',   // primary text dark mode
+  textLightMid:'#A1A1AA',   // secondary text dark mode
 } as const;
 
 export type PaletteKey = keyof typeof P;
@@ -43,17 +43,17 @@ export const LIGHT = {
   cardBg:       '#FFFFFF',
   cardBgAlt:    P.creamMid,
   border:       P.creamMuted,
-  borderStrong: '#C8B87A',
+  borderStrong: '#D4D4D8',
   text:         P.textDark,
   textSub:      P.textMid,
   textMuted:    P.textMuted,
-  accent:       P.amber,
+  accent:       P.olive,
   accentDark:   P.amberDark,
   brand:        P.olive,
-  brandDark:    P.forest,
-  sidebarBg:    P.forest,
-  sidebarBorder:P.forestMid,
-  headerBg:     `rgba(254,250,224,0.95)`,
+  brandDark:    '#3A0D2C',
+  sidebarBg:    '#FFFFFF',
+  sidebarBorder:P.creamMuted,
+  headerBg:     'rgba(255,255,255,0.92)',
 } as const;
 
 /** Dark mode semantic tokens */
@@ -62,15 +62,15 @@ export const DARK = {
   cardBg:       P.forest,
   cardBgAlt:    P.forestMid,
   border:       P.forestMid,
-  borderStrong: P.olive,
+  borderStrong: '#3F3F46',
   text:         P.textLight,
   textSub:      P.creamDark,
-  textMuted:    '#A09040',
-  accent:       P.amber,
+  textMuted:    '#71717A',
+  accent:       P.olive,
   accentDark:   P.amberDark,
   brand:        P.olive,
   brandDark:    P.oliveMid,
   sidebarBg:    P.forest,
   sidebarBorder:P.forestMid,
-  headerBg:     `rgba(28,39,16,0.97)`,
+  headerBg:     'rgba(17,17,20,0.95)',
 } as const;

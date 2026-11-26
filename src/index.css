@@ -2,27 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── JustTouch UI Design Tokens — Earthy Olive & Amber ───────────────────── */
+/* ─── JustTouch UI — Neutral-first, Plum & Gold accents ────────────────────── */
 :root {
-  --color-brand:         #506C38;   /* olive green  */
-  --color-brand-dark:    #283618;   /* forest green */
-  --color-accent:        #DDA15E;   /* warm amber   */
-  --color-accent-dark:   #BC6C25;   /* burnt orange */
-  --color-cream:         #FEFAE0;   /* page bg      */
-  --color-cream-mid:     #F5F0CC;
-  --color-cream-border:  #E8E0A8;
+  --color-brand:        #6A1B4D;
+  --color-brand-dark:   #3A0D2C;
+  --color-accent:       #C6A24B;
+  --color-bg:           #F8F8F9;
+  --color-surface:      #FFFFFF;
+  --color-border:       #E4E4E7;
+  --color-text:         #18181B;
+  --color-text-muted:   #71717A;
 
-  --sidebar-bg:          #283618;
-  --sidebar-border:      #3D5429;
-  --header-bg:           rgba(254,250,224,0.95);
-  --content-bg:          #FEFAE0;
+  --sidebar-bg:         #FFFFFF;
+  --sidebar-border:     #E4E4E7;
+  --header-bg:          rgba(255,255,255,0.92);
 }
 
 .dark {
-  --sidebar-bg:          #1C2710;
-  --sidebar-border:      #283618;
-  --header-bg:           rgba(28,39,16,0.97);
-  --content-bg:          #111808;
+  --color-bg:           #111114;
+  --color-surface:      #1A1A1F;
+  --color-border:       #2C2C33;
+  --color-text:         #FAFAFA;
+  --color-text-muted:   #71717A;
+
+  --sidebar-bg:         #1A1A1F;
+  --sidebar-border:     #2C2C33;
+  --header-bg:          rgba(17,17,20,0.95);
 }
 
 @layer base {
@@ -33,30 +38,30 @@
   }
 
   html {
-    background-color: #FEFAE0;
-    color: #283618;
+    background-color: #F8F8F9;
+    color: #18181B;
   }
 
   html.dark {
-    background-color: #111808;
-    color: #FEFAE0;
+    background-color: #111114;
+    color: #FAFAFA;
   }
 }
 
 /* ─── Scrollbars ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: #DDA15E; border-radius: 9999px; }
-.dark ::-webkit-scrollbar-thumb { background: #3D5429; }
+::-webkit-scrollbar-thumb  { background: #D4D4D8; border-radius: 9999px; }
+.dark ::-webkit-scrollbar-thumb { background: #3F3F46; }
 
-/* ─── Focus ring ───────────────────────────────────────────────────────────── */
+/* ─── Focus ring — plum accent ─────────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid #DDA15E;
+  outline: 2px solid #6A1B4D;
   outline-offset: 2px;
 }
 
-/* ─── Selection ────────────────────────────────────────────────────────────── */
+/* ─── Selection — subtle gold tint ─────────────────────────────────────────── */
 ::selection {
-  background: #DDA15E;
-  color: #283618;
+  background: rgba(198,162,75,0.2);
+  color: #18181B;
 }

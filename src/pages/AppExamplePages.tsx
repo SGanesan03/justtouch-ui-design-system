@@ -6,13 +6,13 @@ import {
   DollarSign, Users, TrendingUp, Activity,
 } from 'lucide-react';
 
-// Earthy palette tokens
-const olive = '#506C38', forest = '#283618', cream = '#FEFAE0';
-const creamMid = '#F5F0CC', creamBorder = '#E8E0A8', amber = '#DDA15E';
-const amberDark = '#BC6C25', textMuted = '#7A6C2C';
+// Plum & Gold palette tokens
+const olive = '#6A1B4D', forest = '#3A0D2C', cream = '#F3E6EF';
+const creamMid = '#EDD6E5', creamBorder = '#D9B1C7', amber = '#D9B1C7';
+const amberDark = '#C6A24B', textMuted = '#8B5A72';
 // aliases for readability
 const navy = forest, tint = creamMid;
-const surface = creamBorder, muted = '#C8B87A', text = textMuted;
+const surface = creamBorder, muted = '#B8849E', text = textMuted;
 
 export function AnalyticsDashboard() {
   const [activeTab, setActiveTab] = useState('Overview');
