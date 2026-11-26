@@ -5,7 +5,7 @@ import {
   CheckCircle2, AlertCircle, Info,
   ChevronLeft, ChevronRight,
 } from 'lucide-react';
-import { PreviewWrapper, OverviewThumbnail } from '@/components';
+import { PreviewWrapper, OverviewThumbnail, JustTouchLogo } from '@/components';
 import type { OnThisPageItem } from '@/components';
 import { P } from '@/theme';
 import {
@@ -17,7 +17,6 @@ import {
   VerificationCodeInputs, VideoPlayers, LoadingIndicators, ProgressSteps,
 } from '@/components';
 import { BASE_VARIANTS_REGISTRY } from '@/components/base/variantsRegistry';
-import { PAGE_CONTENT_MAP } from './PageContentMap';
 import { ErrorPage, PricingPage, LoginPage, SignupPage, VerificationPage, ForgotPasswordPage, EmailTemplatePage } from './SharedPages';
 import { AnalyticsDashboard, OperationsDashboard, ProfileSettings, BillingSettings, HelpCenter, Changelog } from './AppExamplePages';
 import { HeroSection, FeatureSection, CTASection, TestimonialsSection, PricingSection, FAQSection, FooterSection, BannerSection, BlogSection, ContactSection, TeamSection, NewsletterCTA, SocialProofSection } from './MarketingComponentPages';
@@ -26,7 +25,7 @@ import { OVERVIEW_CATALOG } from '@/data/catalog';
 import { useComponentDemoState } from '@/hooks';
 import {
   GRADIENT_PRESETS,
-  FAQ_ITEMS, KPI_METRICS,
+  FAQ_ITEMS, KPI_METRICS, TEAM_MEMBERS,
 } from '@/constants';
 import { matchesSearch } from '@/utils';
 
@@ -52,6 +51,39 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
   useEffect(() => {
     onVariantsChange(BASE_VARIANTS_REGISTRY[activePageId] ?? []);
   }, [activePageId, onVariantsChange]);
+
+  // SECONDARY OVERVIEWS
+  if (activePageId === 'app-ui-overview' || activePageId === 'marketing-overview') {
+    const categoryLabel = activePageId === 'app-ui-overview' ? 'Application UI' : 'Marketing Components';
+    const color = activePageId === 'app-ui-overview' ? P.amber : P.amberDark;
+    const cards = OVERVIEW_CATALOG.filter((c) => c.category === categoryLabel);
+    return (
+      <div>
+        <div className="flex items-center gap-2 mb-6">
+          <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+          <h2 className="text-xs font-bold uppercase tracking-widest" style={{ color }}>{categoryLabel}</h2>
+          <span className="text-xs" style={{ color: P.textMuted }}>({cards.length})</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {cards.map((item) => (
+            <button key={item.id} onClick={() => onSelectPage(item.id)}
+              className="group text-left rounded-xl overflow-hidden transition-all hover:shadow-md"
+              style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, background: darkMode ? P.forest : '#fff' }}>
+              <div className="h-36 flex items-center justify-center border-b"
+                style={{ background: darkMode ? P.forestDeep : P.creamMid, borderColor: darkMode ? P.forestMid : P.creamMuted,
+                         backgroundImage: `linear-gradient(to right,${P.amber}08 1px,transparent 1px),linear-gradient(to bottom,${P.amber}08 1px,transparent 1px)`, backgroundSize: '16px 16px' }}>
+                <OverviewThumbnail type={item.previewType} />
+              </div>
+              <div className="p-3.5">
+                <h3 className="text-sm font-semibold" style={{ color: darkMode ? P.cream : P.forest }}>{item.title}</h3>
+                <p className="text-xs mt-0.5" style={{ color: P.textMuted }}>{item.count}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   // OVERVIEW
   if (activePageId === 'overview') {

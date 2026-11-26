@@ -8,20 +8,14 @@ const PAGE_MAX = 4;
 
 export function useComponentDemoState() {
   const [searchFilter,   setSearchFilter]   = useState('');
-  const [toggleState,    setToggleState]    = useState(true);
-  const [checkboxState,  setCheckboxState]  = useState(true);
   const [activeTab,      setActiveTab]      = useState('Profile');
   const [modalOpen,      setModalOpen]      = useState(false);
-  const [billingAnnual,  setBillingAnnual]  = useState(true);
   const [openFaq,        setOpenFaq]        = useState<number | null>(0);
   const [gradientPreset, setGradientPreset] = useState<string>(DEFAULT_GRADIENT);
   const [chatMessages,   setChatMessages]   = useState<ChatMessage[]>([...INITIAL_CHAT_MESSAGES]);
   const [chatInput,      setChatInput]      = useState('');
   const [tableQuery,     setTableQuery]     = useState('');
   const [currentPageNum, setCurrentPageNum] = useState(PAGE_MIN);
-  const [selectedIcon,   setSelectedIcon]   = useState<string | null>(null);
-  const [showPassword,   setShowPassword]   = useState(false);
-  const [loadingBtn,     setLoadingBtn]     = useState(false);
 
   const sendMessage = useCallback(
     (e: React.FormEvent) => {
@@ -35,11 +29,6 @@ export function useComponentDemoState() {
     },
     [chatInput],
   );
-
-  const triggerLoadingBtn = useCallback(() => {
-    setLoadingBtn(true);
-    setTimeout(() => setLoadingBtn(false), 1200);
-  }, []);
 
   const toggleFaq = useCallback((idx: number) => {
     setOpenFaq((prev) => (prev === idx ? null : idx));
@@ -57,18 +46,12 @@ export function useComponentDemoState() {
 
   return {
     searchFilter,   setSearchFilter,
-    toggleState,    setToggleState,
-    checkboxState,  setCheckboxState,
     activeTab,      setActiveTab,
     modalOpen,      setModalOpen,
-    billingAnnual,  setBillingAnnual,
     openFaq,        toggleFaq,
     gradientPreset, setGradientPreset,
     chatMessages,   chatInput, setChatInput, sendMessage,
     tableQuery,     setTableQuery,
     currentPageNum, setCurrentPageNum, prevPage, nextPage,
-    selectedIcon,   setSelectedIcon,
-    showPassword,   setShowPassword,
-    loadingBtn,     triggerLoadingBtn,
   } as const;
 }
