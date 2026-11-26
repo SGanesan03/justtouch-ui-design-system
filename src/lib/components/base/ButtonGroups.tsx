@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const BUTTON_GROUPS_VARIANTS: OnThisPageItem[] = [
   { id: 'btn-group-default',    label: 'Default' },

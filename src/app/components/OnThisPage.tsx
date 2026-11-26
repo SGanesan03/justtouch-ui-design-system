@@ -1,11 +1,7 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { AlignLeft } from 'lucide-react';
 import { P } from '@justtouch/ui';
-
-export interface OnThisPageItem {
-  id: string;
-  label: string;
-}
+import type { OnThisPageItem } from '@justtouch/ui';
 
 interface OnThisPageProps {
   items: OnThisPageItem[];
@@ -18,7 +14,7 @@ export const OnThisPage = memo<OnThisPageProps>(function OnThisPage({ items, dar
 
   const trackColor  = darkMode ? P.forestMid  : P.creamMuted;
   const textColor   = darkMode ? P.creamDark  : P.textMuted;
-  const activeColor = darkMode ? P.amberDark  : P.amberDark;
+  const activeColor = P.amberDark;
 
   useEffect(() => {
     setActiveId(items[0]?.id ?? '');
@@ -76,15 +72,6 @@ export const OnThisPage = memo<OnThisPageProps>(function OnThisPage({ items, dar
               </button>
             </li>
           ))}
-          <li>
-            <button
-              onClick={() => scrollTo('api-reference')}
-              className="w-full text-left block pl-3 py-1 text-xs border-l-2 border-transparent transition"
-              style={{ color: textColor }}
-            >
-              API reference
-            </button>
-          </li>
         </ul>
       </nav>
     </aside>

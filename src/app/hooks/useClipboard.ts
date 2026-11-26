@@ -10,7 +10,8 @@ export function useClipboard(resetMs = CLIPBOARD_RESET_MS) {
 
   const copy = useCallback(
     (text: string) => {
-      clipboardService.write(text).then(() => {
+      clipboardService.write(text).then((ok) => {
+        if (!ok) return;
         setCopied(true);
         if (timerRef.current) clearTimeout(timerRef.current);
         timerRef.current = setTimeout(() => setCopied(false), resetMs);

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { X } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const BADGES_VARIANTS: OnThisPageItem[] = [
   { id: 'badge-gray',           label: 'Gray' },

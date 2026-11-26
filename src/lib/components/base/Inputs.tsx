@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { Mail, Eye, EyeOff, Search, Phone, User, Lock } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const INPUTS_VARIANTS: OnThisPageItem[] = [
   { id: 'input-default',       label: 'Default' },

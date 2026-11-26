@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Wifi } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const CREDIT_CARDS_VARIANTS: OnThisPageItem[] = [
   { id: 'card-dark',    label: 'Dark card' },

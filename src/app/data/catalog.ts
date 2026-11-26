@@ -1,4 +1,4 @@
-import type { NavCategory, OverviewCardItem } from '@/types';
+import type { NavCategory, OverviewCardItem } from '@justtouch/ui';
 
 // ─── Palette tokens (used in JS for dynamic styles) ──────────────────────────
 export const PALETTE = {

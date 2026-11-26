@@ -1,6 +1,6 @@
 import { memo, useState, useRef } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const VERIFICATION_VARIANTS: OnThisPageItem[] = [
   { id: 'otp-6digit',  label: '6-digit OTP' },

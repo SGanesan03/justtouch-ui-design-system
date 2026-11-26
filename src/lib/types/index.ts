@@ -51,6 +51,13 @@ export type Viewport  = 'desktop' | 'tablet' | 'mobile';
 export type AppView   = 'landing' | 'docs';
 export type LogoSize  = 'sm' | 'md' | 'lg';
 
+// ─── On This Page ───────────────────────────────────────────────────────────
+
+export interface OnThisPageItem {
+  id: string;
+  label: string;
+}
+
 // ─── Chat ────────────────────────────────────────────────────────────────────
 
 export interface ChatMessage {

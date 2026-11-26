@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Bold, Italic, Underline, Link, List, AlignLeft, AlignCenter, AlignRight, Image, Code } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const TEXT_EDITORS_VARIANTS: OnThisPageItem[] = [
   { id: 'te-minimal',  label: 'Minimal toolbar' },

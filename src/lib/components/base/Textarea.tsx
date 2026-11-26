@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const TEXTAREA_VARIANTS: OnThisPageItem[] = [
   { id: 'ta-default',    label: 'Default' },

@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { Plus, Download, Trash2, ArrowRight, Loader2, Mail, ChevronRight } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const BUTTONS_VARIANTS: OnThisPageItem[] = [
   { id: 'btn-primary',       label: 'Primary' },

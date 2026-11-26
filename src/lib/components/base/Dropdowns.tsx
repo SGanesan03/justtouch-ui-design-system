@@ -1,7 +1,7 @@
 import { memo, useState, useRef, useEffect } from 'react';
 import { ChevronDown, Check, Search } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const DROPDOWNS_VARIANTS: OnThisPageItem[] = [
   { id: 'dropdown-default',    label: 'Default' },

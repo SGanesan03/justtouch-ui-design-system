@@ -1,4 +1,4 @@
-import { THEME_STORAGE_KEY } from '@/constants';
+import { THEME_STORAGE_KEY } from '@constants';
 
 export const themeService = {
   getInitialDark(): boolean {

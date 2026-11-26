@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Star } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const RATING_VARIANTS: OnThisPageItem[] = [
   { id: 'rating-stars',     label: 'Star ratings' },

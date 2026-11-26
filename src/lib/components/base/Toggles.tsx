@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const TOGGLES_VARIANTS: OnThisPageItem[] = [
   { id: 'toggle-default',   label: 'Default' },

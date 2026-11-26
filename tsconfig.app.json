@@ -17,7 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
     "paths": {
-      "@/*":            ["./src/*"],
       "@justtouch/ui":  ["./src/lib/index.ts"],
       "@components":    ["./src/app/components/index.ts"],
       "@components/*":  ["./src/app/components/*"],

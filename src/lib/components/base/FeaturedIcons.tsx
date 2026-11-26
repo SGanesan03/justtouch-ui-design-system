@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Zap, Shield, BarChart2, Globe, Lock, Bell, Star, Layers, Cpu, Database } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const FEATURED_ICONS_VARIANTS: OnThisPageItem[] = [
   { id: 'fi-brand',   label: 'Brand' },

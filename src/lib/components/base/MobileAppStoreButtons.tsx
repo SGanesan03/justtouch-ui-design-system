@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const MOBILE_APP_STORE_VARIANTS: OnThisPageItem[] = [
   { id: 'mas-dark',    label: 'Dark background' },

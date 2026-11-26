@@ -1,7 +1,7 @@
 import { memo, useState, useRef, useEffect } from 'react';
 import { Edit2, Copy, Trash2, Share2, MoreHorizontal, ExternalLink, Download } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const CONTEXT_MENUS_VARIANTS: OnThisPageItem[] = [
   { id: 'ctx-default',      label: 'Default' },

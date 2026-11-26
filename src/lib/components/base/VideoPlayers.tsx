@@ -1,7 +1,7 @@
 import { memo, useState, useCallback } from 'react';
 import { Play, Pause, Volume2, Maximize2, SkipForward } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const VIDEO_PLAYERS_VARIANTS: OnThisPageItem[] = [
   { id: 'vp-default',    label: 'Default' },

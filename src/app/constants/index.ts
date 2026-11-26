@@ -1,4 +1,4 @@
-import type { Viewport, ViewMode, LogoSize } from '@/types';
+import type { Viewport, ViewMode, LogoSize } from '@justtouch/ui';
 
 // ─── Theme ───────────────────────────────────────────────────────────────────
 
@@ -15,15 +15,6 @@ export const CLIPBOARD_RESET_MS = 2000 as const;
 // ─── Navigation defaults ─────────────────────────────────────────────────────
 
 export const DEFAULT_PAGE_ID = 'overview' as const;
-
-export const DEFAULT_OPEN_CATEGORIES: Record<string, boolean> = {
-  'base-components':            true,
-  'application-ui-components':  true,
-  'application-ui-examples':    false,
-  'shared-page-examples':       false,
-  'marketing-components':       false,
-  'marketing-examples':         false,
-};
 
 // ─── Preview Wrapper ─────────────────────────────────────────────────────────
 

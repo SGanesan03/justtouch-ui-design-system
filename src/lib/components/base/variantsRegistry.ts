@@ -2,7 +2,7 @@
  * Central registry: pageId → OnThisPage variant items
  * Each base component exports its own VARIANTS array and registers here.
  */
-import type { OnThisPageItem } from '@components/OnThisPage';
+import type { OnThisPageItem } from '@justtouch/ui';
 import { AVATARS_VARIANTS }          from './Avatars';
 import { BADGE_GROUP_VARIANTS }      from './BadgeGroups';
 import { BADGES_VARIANTS }           from './Badges';

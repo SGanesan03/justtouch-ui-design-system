@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo } from 'react';
 import { SIDEBAR_CATEGORIES } from '@data/catalog';
-import { DEFAULT_PAGE_ID, DEFAULT_OPEN_CATEGORIES } from '@constants';
+import { DEFAULT_PAGE_ID } from '@constants';
 import type { AppView, FlatNavItem } from '@justtouch/ui';
 
 export function useNavigation() {
@@ -8,7 +8,6 @@ export function useNavigation() {
   const [activePageId, setActivePageId] = useState<string>(DEFAULT_PAGE_ID);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarSearch, setSidebarSearch] = useState('');
-  const [openCategories, setOpenCategories] = useState<Record<string, boolean>>(DEFAULT_OPEN_CATEGORIES);
 
   const allItems = useMemo<FlatNavItem[]>(
     () =>
@@ -34,24 +33,18 @@ export function useNavigation() {
   const closeMobileMenu = useCallback(() => setMobileMenuOpen(false), []);
   const openMobileMenu  = useCallback(() => setMobileMenuOpen(true), []);
 
-  const toggleCategory = useCallback((catId: string) => {
-    setOpenCategories((prev) => ({ ...prev, [catId]: !prev[catId] }));
-  }, []);
-
   return {
     view,
     activePageId,
     mobileMenuOpen,
     sidebarSearch,
     setSidebarSearch,
-    openCategories,
     allItems,
     currentItem,
     prevItem,
     nextItem,
     navigateDocs,
     goLanding,
-    toggleCategory,
     closeMobileMenu,
     openMobileMenu,
   } as const;

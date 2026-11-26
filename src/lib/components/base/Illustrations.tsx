@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Inbox, Search, FileText, Users, BarChart2, Plus } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const ILLUSTRATIONS_VARIANTS: OnThisPageItem[] = [
   { id: 'illus-empty-inbox',   label: 'Empty inbox' },

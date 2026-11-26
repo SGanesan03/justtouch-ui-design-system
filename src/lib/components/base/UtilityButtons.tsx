@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Copy, Trash2, ExternalLink, Download, MoreHorizontal, X, Plus, Edit2, Share2 } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const UTILITY_BUTTONS_VARIANTS: OnThisPageItem[] = [
   { id: 'ub-icon-only',  label: 'Icon only' },

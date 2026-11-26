@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
+import { PreviewWrapper } from '@components/PreviewWrapper';
 
 // ─── Shared data ─────────────────────────────────────────────────────────────
 

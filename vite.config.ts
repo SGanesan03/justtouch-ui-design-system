@@ -10,7 +10,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@':              path.resolve(__dirname, 'src'),
       '@justtouch/ui':  path.resolve(__dirname, 'src/lib/index.ts'),
       '@components':    path.resolve(__dirname, 'src/app/components'),
       '@pages':         path.resolve(__dirname, 'src/app/pages'),

@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const CHECKBOXES_VARIANTS: OnThisPageItem[] = [
   { id: 'checkbox-default',     label: 'Default' },

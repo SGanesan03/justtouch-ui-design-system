@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const SOCIAL_BUTTONS_VARIANTS: OnThisPageItem[] = [
   { id: 'social-default',   label: 'Default' },

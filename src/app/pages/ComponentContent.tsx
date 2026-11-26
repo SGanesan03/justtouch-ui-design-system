@@ -44,7 +44,7 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
     gradientPreset, setGradientPreset,
     chatMessages, chatInput, setChatInput, sendMessage,
     tableQuery, setTableQuery,
-    currentPageNum, setCurrentPageNum,
+    currentPageNum, setCurrentPageNum, prevPage, nextPage,
   } = useComponentDemoState();
 
   useEffect(() => {
@@ -117,8 +117,8 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
                 <span className="text-xs" style={{ color: P.textMuted }}>({cards.length})</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {cards.map((item, idx) => (
-                  <button key={`${item.id}-${idx}`} onClick={() => onSelectPage(item.id)}
+                {cards.map((item) => (
+                  <button key={item.id} onClick={() => onSelectPage(item.id)}
                     className="group text-left rounded-xl overflow-hidden transition-all hover:shadow-md"
                     style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, background: darkMode ? P.forest : '#fff' }}>
                     <div className="h-36 flex items-center justify-center border-b"
@@ -150,10 +150,10 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
           <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
             {KPI_METRICS.map((m) => (
               <div key={m.title} className="p-5 rounded-xl cursor-pointer transition-all hover:shadow-md"
-                style={{ background: P.creamMid, border: `1px solid ${P.creamMuted}` }}>
+                style={{ background: darkMode ? P.forestMid : P.creamMid, border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}` }}>
                 <p className="text-xs font-medium" style={{ color: P.textMuted }}>{m.title}</p>
                 <div className="mt-3 flex items-baseline justify-between">
-                  <span className="text-2xl font-bold" style={{ color: P.forest }}>{m.val}</span>
+                  <span className="text-2xl font-bold" style={{ color: darkMode ? P.textLight : P.forest }}>{m.val}</span>
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold"
                     style={{ background: m.up ? '#d1fae5' : '#fee2e2', color: m.up ? '#065f46' : '#991b1b' }}>
                     {m.up ? <ArrowUpRight className="w-3 h-3" /> : <ArrowDownRight className="w-3 h-3" />}{m.delta}
@@ -167,10 +167,10 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
           darkMode={darkMode}
           code={`// SVG area chart with olive + amber strokes`}>
           <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 p-5 rounded-xl" style={{ border: `1px solid ${P.creamMuted}`, background: '#fff' }}>
+            <div className="lg:col-span-2 p-5 rounded-xl" style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, background: darkMode ? P.forest : '#fff' }}>
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="text-sm font-semibold" style={{ color: P.forest }}>Downloads (Last 7 Months)</h4>
+                  <h4 className="text-sm font-semibold" style={{ color: darkMode ? P.textLight : P.forest }}>Downloads (Last 7 Months)</h4>
                   <p className="text-xs" style={{ color: P.textMuted }}>React + Tailwind installs</p>
                 </div>
                 <span className="text-xs font-semibold" style={{ color: P.amberDark }}>+32% YoY</span>
@@ -186,11 +186,11 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
               </svg>
             </div>
             <div className="p-5 rounded-xl flex flex-col items-center justify-center text-center"
-              style={{ border: `1px solid ${P.creamMuted}`, background: '#fff' }}>
-              <h4 className="text-sm font-semibold mb-4" style={{ color: P.forest }}>Traffic by Device</h4>
+              style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, background: darkMode ? P.forest : '#fff' }}>
+              <h4 className="text-sm font-semibold mb-4" style={{ color: darkMode ? P.textLight : P.forest }}>Traffic by Device</h4>
               <div className="w-28 h-28 rounded-full flex items-center justify-center"
-                style={{ border: `14px solid ${P.olive}`, borderRightColor: P.creamMuted, borderBottomColor: P.amber }}>
-                <span className="text-sm font-bold" style={{ color: P.forest }}>68%</span>
+                style={{ border: `14px solid ${P.olive}`, borderRightColor: darkMode ? P.forestMid : P.creamMuted, borderBottomColor: P.amber }}>
+                <span className="text-sm font-bold" style={{ color: darkMode ? P.textLight : P.forest }}>68%</span>
               </div>
               <p className="text-xs mt-4" style={{ color: P.textMuted }}>Desktop 68% · Mobile 24% · Tablet 8%</p>
             </div>
@@ -211,32 +211,32 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
         code={`<table className="w-full text-left">...</table>`}>
         <div>
           <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-            style={{ borderBottom: `1px solid ${P.creamMuted}` }}>
+            style={{ borderBottom: `1px solid ${darkMode ? P.forestMid : P.creamMuted}` }}>
             <div className="flex items-center gap-2">
-              <h4 className="text-sm font-semibold" style={{ color: P.forest }}>Team members</h4>
+              <h4 className="text-sm font-semibold" style={{ color: darkMode ? P.textLight : P.forest }}>Team members</h4>
               <span className="px-2 py-0.5 rounded-full text-xs font-semibold"
-                style={{ background: P.creamMid, color: P.amberDark }}>{rows.length} users</span>
+                style={{ background: darkMode ? P.forestMid : P.creamMid, color: P.amberDark }}>{rows.length} users</span>
             </div>
             <div className="relative w-full sm:w-64">
               <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2" style={{ color: P.textMuted }} />
               <input type="text" value={tableQuery} onChange={(e) => setTableQuery(e.target.value)}
                 placeholder="Search member or role..."
                 className="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg focus:outline-none"
-                style={{ border: `1px solid ${P.creamMuted}`, background: '#fff', color: P.forest }} />
+                style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, background: darkMode ? P.forest : '#fff', color: darkMode ? P.textLight : P.forest }} />
             </div>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead style={{ background: P.creamMid, borderBottom: `1px solid ${P.creamMuted}` }}>
+              <thead style={{ background: darkMode ? P.forestMid : P.creamMid, borderBottom: `1px solid ${darkMode ? P.forestMid : P.creamMuted}` }}>
                 <tr>{['Name','Status','Role','Squad'].map(h => (
                   <th key={h} className="py-3 px-4 text-xs font-semibold" style={{ color: P.textMuted }}>{h}</th>
                 ))}</tr>
               </thead>
               <tbody>
                 {rows.map((r) => (
-                  <tr key={r.email} style={{ borderBottom: `1px solid ${P.creamMuted}` }}>
+                  <tr key={r.email} style={{ borderBottom: `1px solid ${darkMode ? P.forestMid : P.creamMuted}` }}>
                     <td className="py-3 px-4">
-                      <p className="font-medium text-sm" style={{ color: P.forest }}>{r.name}</p>
+                      <p className="font-medium text-sm" style={{ color: darkMode ? P.textLight : P.forest }}>{r.name}</p>
                       <p className="text-xs" style={{ color: P.textMuted }}>{r.email}</p>
                     </td>
                     <td className="py-3 px-4">
@@ -252,22 +252,22 @@ export const ComponentContent: React.FC<ComponentContentProps> = ({ activePageId
               </tbody>
             </table>
           </div>
-          <div className="p-4 flex items-center justify-between text-xs" style={{ borderTop: `1px solid ${P.creamMuted}` }}>
-            <button onClick={() => setCurrentPageNum(Math.max(1, currentPageNum - 1))}
+          <div className="p-4 flex items-center justify-between text-xs" style={{ borderTop: `1px solid ${darkMode ? P.forestMid : P.creamMuted}` }}>
+            <button onClick={prevPage}
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg font-medium transition"
-              style={{ border: `1px solid ${P.creamMuted}`, color: P.textMuted }}>
+              style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, color: P.textMuted }}>
               <ChevronLeft className="w-3.5 h-3.5" /> Previous
             </button>
             <div className="flex items-center gap-1">
               {[1,2,3,4].map((p) => (
                 <button key={p} onClick={() => setCurrentPageNum(p)}
                   className="w-7 h-7 rounded-lg font-semibold transition"
-                  style={{ background: currentPageNum === p ? P.creamMid : 'transparent', color: currentPageNum === p ? P.amberDark : P.textMuted }}>{p}</button>
+                  style={{ background: currentPageNum === p ? (darkMode ? P.forestMid : P.creamMid) : 'transparent', color: currentPageNum === p ? P.amberDark : P.textMuted }}>{p}</button>
               ))}
             </div>
-            <button onClick={() => setCurrentPageNum(Math.min(4, currentPageNum + 1))}
+            <button onClick={nextPage}
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg font-medium transition"
-              style={{ border: `1px solid ${P.creamMuted}`, color: P.textMuted }}>
+              style={{ border: `1px solid ${darkMode ? P.forestMid : P.creamMuted}`, color: P.textMuted }}>
               Next <ChevronRight className="w-3.5 h-3.5" />
             </button>
           </div>

@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const SLIDERS_VARIANTS: OnThisPageItem[] = [
   { id: 'slider-default',  label: 'Default' },

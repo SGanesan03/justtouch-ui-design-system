@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { X, ChevronDown } from 'lucide-react';
-import { PreviewWrapper } from '@/components/PreviewWrapper';
-import type { OnThisPageItem } from '@/components/OnThisPage';
+import { PreviewWrapper } from '@components/PreviewWrapper';
+import type { OnThisPageItem } from '@justtouch/ui';
 
 export const MULTI_SELECT_VARIANTS: OnThisPageItem[] = [
   { id: 'ms-default',   label: 'Default' },
